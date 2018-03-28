@@ -22,9 +22,9 @@
                   <table class="table table-bordered table-striped">
                       <thead>
                           <tr>
-                              <th>Role</th>
-                              <th>Permissions</th>
-                              <th>Action</th>
+                              <th>Rol</th>
+                              <th>Permisos</th>
+                              <th>Acciones</th>
                           </tr>
                       </thead>
                       <tbody>
@@ -33,10 +33,12 @@
                               <td>{{ $role->name }}</td>
                               <td>{{ str_replace(array('[',']','"'),'', $role->permissions()->pluck('name')) }}</td>
                               <td>
-                              <a href="{{ URL::to('roles/'.$role->id.'/edit') }}" class="btn btn-warning pull-left">Edit</a>
-                              {!! Form::open(['method' => 'DELETE', 'route' => ['roles.destroy', $role->id] ]) !!}
-                              {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
-                              {!! Form::close() !!}
+                                <div class="btn-group btn-group-xs" role="group" aria-label="Toolbar with button groups">
+                                  <a href="{{ URL::to('roles/'.$role->id.'/edit') }}" class="btn btn-warning pull-left">Editar</a>
+                                  {!! Form::open(['method' => 'DELETE', 'route' => ['roles.destroy', $role->id] ]) !!}
+                                  {!! Form::submit('Eliminar', ['class' => 'btn btn-danger']) !!}
+                                  {!! Form::close() !!}
+                                </div>
                               </td>
                           </tr>
                           @endforeach

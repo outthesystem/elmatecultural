@@ -43,6 +43,15 @@
   100% { transform: rotate(360deg); }
 }
 </style>
+
+<script type="text/javascript">
+$scope.isDisabled = false;
+
+$scope.disableButton = function() {
+    $scope.isDisabled = true;
+}
+</script>
+
 <body class="app">
   <header class="app-header navbar">
     <button class="navbar-toggler mobile-sidebar-toggler d-lg-none" type="button">☰</button>
@@ -80,21 +89,8 @@
           @guest
             @else
               <li class="nav-item">
-                <a class="nav-link {{ request()->is('/') ? 'active' : '' }}
+                <a class="nav-link {{ request()->is('/dashboard') ? 'active' : '' }}
                 " href="{{route('dashboard.index')}}"><i class="icon-speedometer"></i> <i class="fa fa-line-chart"></i> Dashboard </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link {{ request()->is('contrato/*') ? 'active' : '' }}
-                {{ request()->is('contrato') ? 'active' : '' }}
-                {{ request()->is('contrato/create') ? 'active' : '' }}" href="{{route('contrato.index')}}"><i class="icon-speedometer"></i> <i class="fa fa-file-text"></i> Contratos </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link   {{ request()->is('pasajero') ? 'active' : '' }}
-                  {{ request()->is('addpago/*') ? 'active' : '' }}" href="{{route('pasajero.index')}}" ><i class="icon-speedometer"></i> <i class="fa fa-address-book-o"></i> Pasajeros </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link   {{ request()->is('recibo') ? 'active' : '' }}
-                  {{ request()->is('recibo') ? 'active' : '' }}" href="{{route('recibos.index')}}" ><i class="icon-speedometer"></i> <i class="fa fa-usd"></i> Recibos </a>
               </li>
               <li class="nav-title">
                Usuarios

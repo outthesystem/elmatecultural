@@ -23,7 +23,8 @@ class DashboardController extends Controller
     {
       \Excel::create('Contratos', function($excel) {
 
-        $users = Contrato::all();
+        $users = Contrato::where('tipo_contrato', 2)->get();
+
 
         $excel->sheet('Users', function($sheet) use($users) {
         $sheet->row(1, [

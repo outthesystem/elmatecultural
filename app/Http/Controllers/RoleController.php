@@ -3,6 +3,9 @@ namespace App\Http\Controllers;
 use App\Role;
 use App\Permission;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Notify;
+
 class RoleController extends Controller
 {
 
@@ -34,8 +37,6 @@ class RoleController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name'=>'required|unique:roles|max:10',
-            'permissions' =>'required',
             ]
         );
         $role = new Role();
@@ -45,6 +46,8 @@ class RoleController extends Controller
         if($request->permissions <> ''){
             $role->permissions()->attach($request->permissions);
         }
+        Notify::success('', $title = 'Datos creados correctamente', $options = []);
+
         return redirect()->route('roles.index')->with('success','Roles added successfully');
     }
 
@@ -65,13 +68,15 @@ class RoleController extends Controller
         $role = Role::findOrFail($id);//Get role with the given id
     //Validate name and permission fields
         $this->validate($request, [
-    
         ]);
         $input = $request->except(['permissions']);
         $role->fill($input)->save();
         if($request->permissions <> ''){
             $role->permissions()->sync($request->permissions);
         }
+        Notify::success('', $title = 'Datos actualizados correctamente', $options = []);
+
+
         return redirect()->route('roles.index')->with('success','Roles updated successfully');
     }
     /**
@@ -84,6 +89,9 @@ class RoleController extends Controller
     {
         $role = Role::findOrFail($id);
         $role->delete();
+
+        Notify::success('', $title = 'Datos eliminados correctamente', $options = []);
+
         return redirect()->route('roles.index')
             ->with('success',
              'Role deleted successfully!');
