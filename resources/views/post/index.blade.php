@@ -21,6 +21,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Titulo</th>
+                            <th>Categoria</th>
                             <th>F inicio - Hora</th>
                             <th>Lugar</th>
                             <th>Tipo de entrada</th>
@@ -37,6 +38,7 @@
                         <tr>
                             <td>{{ $c->id }}</td>
                             <td>{{ $c->title }}</td>
+                            <td>{{ $c->category->name }}</td>
                             <td>{{ $c->date_init }} - {{ $c->hour }}</td>
                               <td>{{ $c->place }}</td>
                               <td>{{ $c->entrytype }}</td>

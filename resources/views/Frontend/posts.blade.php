@@ -39,7 +39,7 @@
           <div class="back back-background" style="background-image: url('{{$p->image}}'); ">
             <div class="card-content">
               <h5 class="card-title">
-    													Lugar: {{$p->place}} | Fecha: {{date('d-m-Y', strtotime($p->date_init))}}
+    													Lugar: {{$p->place}} | Fecha: {{date('d-m-Y', strtotime($p->date_init))}} {{$p->hour}}
     												</h5>
               <p class="card-description">{{$p->description}}</p>
               <div class="footer text-center">

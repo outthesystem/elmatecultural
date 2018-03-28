@@ -91,6 +91,10 @@
 	            <input type="text" name="date_init" class="form-control datetimepicker" value="{{Carbon\Carbon::now()}}"/>
 	        </div>
 					<div class="form-group label-floating">
+							<label class="control-label">Hora</label>
+				    	<input type="text" value="" name="hour" class="form-control" />
+					</div>
+					<div class="form-group label-floating">
 							<label class="control-label">Lugar</label>
 				    	<input type="text" value="" name="place" class="form-control" />
 					</div>
@@ -99,8 +103,8 @@
 				    	<input type="text" value="" name="entrytype" placeholder="Gratuita, entrada simple, etc..." class="form-control" />
 					</div>
 					<div class="form-group label-floating">
-							<label class="control-label">Precio (solo en numeros)</label>
-				    	<input type="text" value="" placeholder="Precio (solo en numeros)" name="price" class="form-control" />
+							<label class="control-label">Precio </label>
+				    	<input type="number" value="" placeholder="Precio" name="price" class="form-control" />
 					</div>
 					<div class="form-group label-floating">
 							<label class="control-label">Web / Facebook</label>

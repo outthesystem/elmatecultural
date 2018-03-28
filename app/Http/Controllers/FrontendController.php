@@ -35,6 +35,7 @@ class FrontendController extends Controller
         $post->category_id = $request->category_id;
         $post->description = $request->description;
         $post->date_init = date('Y-m-d', strtotime($request->date_init));
+        $post->hour = $request->hour;
         $post->place = $request->place;
         $post->price = $request->price;
         $post->entrytype = $request->entrytype;
