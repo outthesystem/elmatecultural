@@ -24,9 +24,15 @@
     <!-- Styles -->
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/jquery-editable-select.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
 
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-beta.1/classic/ckeditor.js"></script>
 </head>
 <style media="screen">
 .loader {
@@ -43,14 +49,6 @@
   100% { transform: rotate(360deg); }
 }
 </style>
-
-<script type="text/javascript">
-$scope.isDisabled = false;
-
-$scope.disableButton = function() {
-    $scope.isDisabled = true;
-}
-</script>
 
 <body class="app">
   <header class="app-header navbar">
@@ -91,6 +89,14 @@ $scope.disableButton = function() {
               <li class="nav-item">
                 <a class="nav-link {{ request()->is('/dashboard') ? 'active' : '' }}
                 " href="{{route('dashboard.index')}}"><i class="icon-speedometer"></i> <i class="fa fa-line-chart"></i> Dashboard </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{ request()->is('/category') ? 'active' : '' }}
+                " href="{{route('category.index')}}"><i class="icon-speedometer"></i> <i class="fa fa-list"></i> Categorias </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{ request()->is('/posts') ? 'active' : '' }}
+                " href="{{url('/posts')}}"><i class="icon-speedometer"></i> <i class="fa fa-list"></i> Publicaciones </a>
               </li>
               <li class="nav-title">
                Usuarios

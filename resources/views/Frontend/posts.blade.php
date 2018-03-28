@@ -9,9 +9,7 @@
             <label class="label-control">Selecciona una fecha</label>
             <input type="text" name="search" class="form-control datetimepicker" value="{{Carbon\Carbon::now()}}"/>
             <input type="submit" class="btn btn-success" value="Buscar">
-
         </div>
-
       </form>
     </center>
   </div>
