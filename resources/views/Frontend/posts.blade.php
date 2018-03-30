@@ -23,15 +23,15 @@
 	    								<a href="#pablo">
 	    									<img class="img" style="height:330px;" src="{{$p->image}}">
 	    									<div class="card-title">
-	    										This Summer Will be Awesome
+	    										{{$p->title}}
 	    									</div>
 	    								</a>
 	    							<div class="colored-shadow" style="background-image: url(&quot;{{$p->image}}&quot;); opacity: 1;"></div><div class="ripple-container"></div></div>
 
 	    							<div class="card-content">
-	    								<h6 class="category text-info">Fashion</h6>
+	    								<h6 class="category text-info">{{$p->category->name}}</h6>
 	    								<p class="card-description">
-	    									Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                        {!! $p->description !!}
 	    								</p>
 	    							</div>
 	    						</div>

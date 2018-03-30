@@ -7695,7 +7695,7 @@ footer .pull-center {
     margin: 0;
     border-width: 0;
     background-color: transparent;
-    color: #9c27b0;
+    color: #4CAF50;
     box-shadow: none;
 }
 
@@ -7705,7 +7705,7 @@ footer .pull-center {
 
 .bootstrap-datetimepicker-widget a[data-action]:hover span {
     background-color: #eeeeee;
-    color: #9c27b0;
+    color: #4CAF50;
 }
 
 .bootstrap-datetimepicker-widget a[data-action]:active {
@@ -7817,7 +7817,7 @@ footer .pull-center {
 
 .bootstrap-datetimepicker-widget table th.disabled, .bootstrap-datetimepicker-widget table th.disabled:hover {
     background: none;
-    color: #eeeeee;
+    color: red;
     cursor: not-allowed;
 }
 
@@ -7876,6 +7876,7 @@ footer .pull-center {
 
 .bootstrap-datetimepicker-widget table td.day > div {
     height: 30px;
+    color: green;
     line-height: 30px;
     width: 30px;
     text-align: center;
@@ -7911,7 +7912,7 @@ footer .pull-center {
     content: '';
     display: inline-block;
     border: 0 0 7px 7px solid transparent;
-    border-bottom-color: #9c27b0;
+    border-bottom-color: #4CAF50;
     border-top-color: rgba(0, 0, 0, 0.2);
     position: absolute;
     bottom: 4px;
@@ -7920,7 +7921,7 @@ footer .pull-center {
 
 .bootstrap-datetimepicker-widget table td.active > div,
 .bootstrap-datetimepicker-widget table td.active:hover > div {
-    background-color: #9c27b0;
+    background-color: #4CAF50;
     color: #FFFFFF;
     box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
 }
@@ -7932,7 +7933,7 @@ footer .pull-center {
 .bootstrap-datetimepicker-widget table td.disabled > div,
 .bootstrap-datetimepicker-widget table td.disabled:hover > div {
     background: none;
-    color: #eeeeee;
+    color: red;
     cursor: not-allowed;
 }
 
@@ -7952,7 +7953,7 @@ footer .pull-center {
 }
 
 .bootstrap-datetimepicker-widget table td span.active {
-    background-color: #9c27b0;
+    background-color: #4CAF50;
     color: #FFFFFF;
 }
 

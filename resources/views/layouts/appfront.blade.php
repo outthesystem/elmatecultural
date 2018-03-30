@@ -11,7 +11,8 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
 	<!--     Fonts and icons     -->
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=codropsicons:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
 	<!-- CSS Files -->
@@ -19,14 +20,14 @@
     <link href="{{asset('frontend/css/material-kit.css?v=1.2.1')}}" rel="stylesheet"/>
 </head>
 
-<body class="blog-posts">
+<body class="blog-posts" style="">
 
     <div class="page-header header-small">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
-					<h2 class="title" style="margin-top:-10px;color:#5CF284;">el mate cultural</h1>
-						<h4 style="margin-top:-15px;color:#333333;">Compartiendo cultura</h3>
+					<h1 class="title" style="margin-top:-10px;color:#5CF284;">el mate cultural</h1>
+						<h3 style="margin-top:-15px;color:#333333;">compartiendo cultura</h3>
 						<a data-toggle="modal" data-target="#myModal" class="btn btn-success btn-raised btn-lg">
 						<i class="material-icons">add</i> Crea tu evento
 					<div class="ripple-container"></div></a>
@@ -125,7 +126,7 @@
 <!-- end navbar -->
 <br>
 <br>
-<div class="main main-raised">
+<div class="main main-raised" style="margin-right:40px;margin-left:40px;">
 		<div class="container" >
       <div class="section">
 
