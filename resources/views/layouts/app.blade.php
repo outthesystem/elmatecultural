@@ -50,7 +50,7 @@
 }
 </style>
 
-<body class="app">
+<body class="app sidebar-minimized">
   <header class="app-header navbar">
     <button class="navbar-toggler mobile-sidebar-toggler d-lg-none" type="button">☰</button>
     <a class="navbar-brand" href="{{ url('/') }}">
@@ -82,7 +82,7 @@
   </header>
   <div class="app-body">
     <div class="sidebar">
-      <nav class="sidebar-nav">
+      <nav class="sidebar-nav ">
         <ul class="nav">
           @guest
             @else

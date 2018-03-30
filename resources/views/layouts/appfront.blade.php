@@ -11,7 +11,7 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
 	<!--     Fonts and icons     -->
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=codropsicons:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
 	<!-- CSS Files -->
@@ -21,11 +21,12 @@
 
 <body class="blog-posts">
 
-    <div class="page-header header-filter header-small" style="background-color:#E4E4E4;">
+    <div class="page-header header-small">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
-					<h2 class="title">el mate cultural</h1>
+					<h2 class="title" style="margin-top:-10px;color:#5CF284;">el mate cultural</h1>
+						<h4 style="margin-top:-15px;color:#333333;">Compartiendo cultura</h3>
 						<a data-toggle="modal" data-target="#myModal" class="btn btn-success btn-raised btn-lg">
 						<i class="material-icons">add</i> Crea tu evento
 					<div class="ripple-container"></div></a>
@@ -43,6 +44,7 @@
 					<i class="material-icons">clear</i>
 				</button>
 				<h4 class="modal-title">Crea tu evento</h4>
+
 			</div>
 			<div class="modal-body">
 				<form class="" action="{{route('front.store')}}" method="post" enctype="multipart/form-data">
@@ -121,9 +123,10 @@
 </div>
 
 <!-- end navbar -->
-
+<br>
+<br>
 <div class="main main-raised">
-		<div class="container">
+		<div class="container" style="margin:30px">
       <div class="section">
 
 					@if(session()->has('message'))
