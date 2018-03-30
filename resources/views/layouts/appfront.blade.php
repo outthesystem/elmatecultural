@@ -26,7 +26,7 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<h2 class="title">el mate cultural</h1>
-						<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-success btn-raised btn-lg">
+						<a data-toggle="modal" data-target="#myModal" class="btn btn-success btn-raised btn-lg">
 						<i class="material-icons">add</i> Crea tu evento
 					<div class="ripple-container"></div></a>
 				</div>
@@ -65,7 +65,7 @@
 					</div>
 					<div class="form-group">
 	            <label class="label-control">Selecciona una fecha</label>
-	            <input type="text" name="date_init" class="form-control datetimepicker" value="{{Carbon\Carbon::now()}}"/>
+	            <input type="text" name="date_init" class="form-control datetimepicker1" value="{{Carbon\Carbon::now()}}"/>
 	        </div>
 					<div class="form-group label-floating">
 							<label class="control-label">Hora</label>
@@ -217,6 +217,21 @@
 				 clear: 'fa fa-trash',
 				 close: 'fa fa-remove'
 		 }
+ });
+ $('.datetimepicker1').datetimepicker({
+	 format: 'YYYY-MM-DD',
+	 locale: 'es-us',
+		icons: {
+				time: "fa fa-clock-o",
+				date: "fa fa-calendar",
+				up: "fa fa-chevron-up",
+				down: "fa fa-chevron-down",
+				previous: 'fa fa-chevron-left',
+				next: 'fa fa-chevron-right',
+				today: 'fa fa-screenshot',
+				clear: 'fa fa-trash',
+				close: 'fa fa-remove'
+		}
  });
 	</script>
 </html>
