@@ -205,6 +205,14 @@
 		sideBySide: true,
 		keepOpen: true,
 		format: 'YYYY-MM-DD',
+
+		enabledDates: [
+
+			@foreach ($posts as $p)
+			 moment("{{date('m/d/Y', strtotime($p->date_init))}}"),
+			@endforeach
+
+                    ],
 		locale: 'es-us',
 		 icons: {
 				 time: "fa fa-clock-o",

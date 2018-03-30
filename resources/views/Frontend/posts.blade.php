@@ -7,7 +7,7 @@
       <form class="" action="{{route('front.index')}}" method="get">
         <div class="form-group" style="margin-top:-50px;">
           <h3>Selecciona una fecha para ver los eventos disponibles</h3>
-            <input type="text" id="datetimepicker" name="search" class="form-control datetimepicker" value="{{Carbon\Carbon::now()}}"  required autofocus/>
+            <input type="text" id="datetimepicker" name="search" class="form-control datetimepicker" required autofocus/>
             <input type="submit" class="btn btn-success" value="Buscar">
         </div>
       </form>
