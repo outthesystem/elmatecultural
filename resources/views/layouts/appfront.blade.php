@@ -126,7 +126,7 @@
 <br>
 <br>
 <div class="main main-raised">
-		<div class="container" style="margin:30px">
+		<div class="container" >
       <div class="section">
 
 					@if(session()->has('message'))

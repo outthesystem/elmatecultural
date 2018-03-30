@@ -17,50 +17,24 @@
   </div>
   @forelse ($posts as $p)
   <div class="col-sm-6">
-      <div class="rotating-card-container manual-flip">
-        <div class="card card-rotate">
-          <div class="front front-background" style="background-image: url('{{$p->image}}');">
-            <div class="card-content">
-              <h6 class="category text-info" >{{$p->category->name}}</h6>
-              <a href="#pablo">
-                <h3 class="card-title">{{$p->title}}</h3>
-              </a>
-              <p class="card-description">
-                {{$p->description}}
-              </p>
 
-              <div class="footer text-center">
-                <button type="button" name="button" class="btn btn-danger btn-fill btn-round btn-rotate">
-    														<i class="material-icons">add</i> Ver mas
-    													<div class="ripple-container"></div></button>
-              </div>
-            </div>
-          </div>
+                  <div class="card card-blog">
+	    							<div class="card-image">
+	    								<a href="#pablo">
+	    									<img class="img" style="height:330px;" src="{{$p->image}}">
+	    									<div class="card-title">
+	    										This Summer Will be Awesome
+	    									</div>
+	    								</a>
+	    							<div class="colored-shadow" style="background-image: url(&quot;{{$p->image}}&quot;); opacity: 1;"></div><div class="ripple-container"></div></div>
 
-          <div class="back back-background" style="background-image: url('{{$p->image}}'); ">
-            <div class="card-content">
-              <h5 class="card-title">
-    													Lugar: {{$p->place}} | Fecha: {{date('d-m-Y', strtotime($p->date_init))}} {{$p->hour}}
-    												</h5>
-              <p class="card-description">{{$p->description}}</p>
-              <div class="footer text-center">
-                <a href="#pablo" class="btn btn-info btn-just-icon btn-fill btn-round">
-    														<i class="material-icons">monetization_on</i> {{$p->price}}
-    													</a>
-                <a href="#pablo" class="btn btn-success btn-just-icon btn-fill btn-round btn-wd">
-    														<i class="material-icons">mode_edit</i> {{$p->entrytype}}
-    													</a>
-              </div>
-              <br>
-              <div class="footer text-center">
-                <button type="button" name="button" class="btn btn-success btn-fill btn-round btn-rotate">
-    														<i class="material-icons">refresh</i> Volver
-    													<div class="ripple-container"></div></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+	    							<div class="card-content">
+	    								<h6 class="category text-info">Fashion</h6>
+	    								<p class="card-description">
+	    									Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+	    								</p>
+	    							</div>
+	    						</div>
   </div>
 @empty
   <div class="col-sm-12">
