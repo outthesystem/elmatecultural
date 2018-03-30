@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<link rel="apple-touch-icon" sizes="76x76" href="{{asset('frontend/img/apple-icon.png')}}">
-	<link rel="icon" type="image/png" href="{{asset('assets/img/favicon.png')}}">
+	<link rel="icon" type="image/png" href="{{asset('frontend/img/favicon.png')}}">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<title>El Mate Cultural</title>
@@ -20,7 +20,7 @@
     <link href="{{asset('frontend/css/material-kit.css?v=1.2.1')}}" rel="stylesheet"/>
 </head>
 
-<body class="blog-posts" style="">
+<body class="blog-posts" style="background-color:white;">
 
     <div class="page-header header-small">
 		<div class="container">
