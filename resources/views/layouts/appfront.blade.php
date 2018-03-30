@@ -21,37 +21,14 @@
 
 <body class="blog-posts">
 
-  <nav class="navbar navbar-primary navbar-transparent navbar-absolute">
-    	<div class="container">
-        	<!-- Brand and toggle get grouped for better mobile display -->
-        	<div class="navbar-header">
-        		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
-            		<span class="sr-only">Toggle navigation</span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-        		</button>
-        		<a class="navbar-brand" href="/">el mate cultural</a>
-        	</div>
-
-        	<div class="collapse navbar-collapse">
-        		<ul class="nav navbar-nav navbar-right">
-							<li>
-								<a data-toggle="modal" data-target="#myModal">
-									<i class="material-icons">add</i> Crea tu evento
-								<div class="ripple-container"></div></a>
-							</li>
-        		</ul>
-        	</div>
-    	</div>
-    </nav>
-
-    <div class="page-header header-filter header-small" data-parallax="true" style="background-image: url('frontend/img/bg10.jpg');">
+    <div class="page-header header-filter header-small" style="background-color:#E4E4E4;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
-					<h2 class="title">Descubre Eventos</h1>
-
+					<h2 class="title">el mate cultural</h1>
+						<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-success btn-raised btn-lg">
+						<i class="material-icons">add</i> Crea tu evento
+					<div class="ripple-container"></div></a>
 				</div>
 			</div>
 		</div>
@@ -172,14 +149,14 @@
 
 	<footer class="footer">
 			<div class="container">
-				<a class="footer-brand" href="#pablo">el mate cultural</a>
+				<a class="footer-brand" href="#pablo">	Contactanos</a>
 
 
 				<ul class="pull-center">
 
 					<li>
 						<a href="#pablo">
-							Contactanos
+
 						</a>
 					</li>
 				</ul>
@@ -224,6 +201,9 @@
 
 	<script type="text/javascript">
 	$('.datetimepicker').datetimepicker({
+		inline: true,
+		sideBySide: true,
+		keepOpen: true,
 		format: 'YYYY-MM-DD',
 		locale: 'es-us',
 		 icons: {

@@ -2,18 +2,19 @@
 
 <div class="row">
 
-  <div class="col-sm-12" >
+  <div class="col-md-offset-2 col-sm-8" style="margin-top:0px;">
     <center>
       <form class="" action="{{route('front.index')}}" method="get">
-        <div class="form-group" style="margin-top:0px;">
-            <label class="label-control">Selecciona una fecha</label>
-            <input type="text" name="search" class="form-control datetimepicker" value="{{Carbon\Carbon::now()}}"/>
+        <div class="form-group" style="margin-top:-50px;">
+          <h3>Selecciona una fecha para ver los eventos disponibles</h3>
+            <input type="text" id="datetimepicker" name="search" class="form-control datetimepicker" value="{{Carbon\Carbon::now()}}"  required autofocus/>
             <input type="submit" class="btn btn-success" value="Buscar">
         </div>
       </form>
     </center>
-  </div>
+    <br><br><br>
 
+  </div>
   @forelse ($posts as $p)
   <div class="col-sm-6">
       <div class="rotating-card-container manual-flip">
