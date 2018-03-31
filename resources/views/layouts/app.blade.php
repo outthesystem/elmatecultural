@@ -58,6 +58,13 @@
     <ul class="nav navbar-nav d-md-down-none">
       @guest
         @else
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url('/')}}">Ir a la Web </a>
+            </li>
+            <li class="nav-item">
+            </li>
+          </ul>
           <li class="nav-item">
             <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
               <span class="d-md-down-none">  {{ Auth::user()->name }}</span>
