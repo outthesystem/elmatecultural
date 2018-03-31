@@ -62,15 +62,15 @@
 					{{csrf_field()}}
 					<div class="form-group label-floating">
 							<label class="control-label">Titulo</label>
-				    	<input type="text" value="" name="title" class="form-control" />
+				    	<input type="text" value="" name="title" class="form-control" required/>
 					</div>
 					<div class="form-group label-floating">
 						<label class="control-label">Descripcion</label>
-				     <textarea class="form-control" name="description" placeholder="" rows="5"></textarea>
+				     <textarea class="form-control" name="description" placeholder="" rows="5" required></textarea>
 					</div>
 					<div class="form-group">
 							<label class="control-label">Selecciona una categoria</label>
-							<select class="selectpicker" data-style="btn-success" name="category_id" data-live-search="true" title="Selecciona una categoria">
+							<select class="selectpicker" data-style="btn-success" name="category_id" data-live-search="true" title="Selecciona una categoria" required>
 							  @foreach ($categories as $c)
 									<option value="{{$c->id}}" data-tokens="{{$c->name}}">{{$c->name}}</option>
 							  @endforeach
@@ -78,31 +78,38 @@
 					</div>
 					<div class="form-group">
 	            <label class="label-control">Selecciona una fecha</label>
-	            <input type="text" name="date_init" class="form-control datetimepicker1" value="{{Carbon\Carbon::now()}}"/>
+	            <input type="text" name="date_init" class="form-control datetimepicker1" value="{{Carbon\Carbon::now()}}" required/>
 	        </div>
 					<div class="form-group">
 							<label class="control-label">Hora</label>
-				    	<input type="text" value="" name="hour" class="form-control datetimepicker2" />
+				    	<input type="text" value="" name="hour" class="form-control datetimepicker2" required/>
 					</div>
 					<div class="form-group label-floating">
 							<label class="control-label">Lugar</label>
-				    	<input type="text" value="" name="place" class="form-control" />
+				    	<input type="text" value="" name="place" class="form-control" required/>
 					</div>
 					<div class="form-group">
 							<label class="control-label">Tipo de entrada</label>
-				    	<input type="text" value="" name="entrytype" placeholder="Gratuita, entrada simple, etc..." class="form-control" />
+
+							<select class="selectpicker" data-style="btn-success"  name="entrytype" data-live-search="true" title="Selecciona un tipo de entrada" required>
+								<option value="Entrada gratuita" data-tokens="Entrada gratuita">Entrada gratuita</option>
+								<option value="Entrada a la gorra" data-tokens="Entrada gratuita">Entrada a la gorra</option>
+								<option value="Precio unico" data-tokens="Precio unico">Precio unico</option>
+								<option value="Entrada desde..." data-tokens="Entrada desde...">Entrada desde...</option>
+									<option value="Bono contribucion" data-tokens="Bono contribucion">Bono contribucion</option>
+							</select>
 					</div>
 					<div class="form-group label-floating">
 							<label class="control-label">Precio </label>
-				    	<input type="number" value="" placeholder="Precio" name="price" class="form-control" />
+				    	<input type="number" value="" placeholder="Precio" name="price" class="form-control" required/>
 					</div>
 					<div class="form-group label-floating">
 							<label class="control-label">Web / Facebook</label>
-				    	<input type="text" value="" placeholder="" name="webfacebook" class="form-control" />
+				    	<input type="text" value="" placeholder="" name="webfacebook" class="form-control" required/>
 					</div>
 					<div class="form-group label-floating">
 							<label class="control-label">Email de contacto</label>
-				    	<input type="text" value="" placeholder="" name="email" class="form-control" />
+				    	<input type="text" value="" placeholder="" name="email" class="form-control" required/>
 					</div>
 					<div class="form-group label-floating">
 						<div class="fileinput fileinput-new text-center" data-provides="fileinput">
