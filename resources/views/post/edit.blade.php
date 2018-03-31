@@ -69,7 +69,7 @@
                   <div class="form-check">
                     <label for="approved">Aprobado:</label>
                     @if ($post->approved == 1)
-                      <input type="checkbox" name="approved" id="approved" value="0" checked/>
+                      <input type="checkbox" name="approved" id="approved" value="1" checked/>
                       @else
                         <input type="checkbox" name="approved" id="approved" value="1"/>
                     @endif
@@ -77,7 +77,7 @@
                   <div class="form-check">
                     <label for="name">Destacado:</label>
                     @if ($post->sticky == 1)
-                      <input type="checkbox" name="sticky" id="sticky" value="0" checked/>
+                      <input type="checkbox" name="sticky" id="sticky" value="1" checked/>
                       @else
                         <input type="checkbox" name="sticky" id="sticky" value="1"/>
 

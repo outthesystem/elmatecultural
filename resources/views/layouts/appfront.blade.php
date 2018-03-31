@@ -169,25 +169,22 @@
 
 	<footer class="footer">
 			<div class="container">
-				<a class="footer-brand" href="#pablo">	Contactanos</a>
 
 
 				<ul class="pull-center">
 
-					<li>
-						<a href="#pablo">
+						<a class="footer-brand" href="#pablo">	hola@elmatecultural.com</a>
 
-						</a>
-					</li>
+					<ul class="social-buttons pull-right">
+						<li>
+							<a href="https://www.facebook.com/compartimoscultura/" target="_blank" class="btn btn-just-icon btn-facebook btn-simple">
+								<i class="fa fa-facebook-square"></i>
+							</a>
+						</li>
+					</ul>
 				</ul>
 
-				<ul class="social-buttons pull-right">
-					<li>
-						<a href="https://www.facebook.com/compartimoscultura/" target="_blank" class="btn btn-just-icon btn-facebook btn-simple">
-							<i class="fa fa-facebook-square"></i>
-						</a>
-					</li>
-				</ul>
+
 
 			</div>
 		</footer>
@@ -278,5 +275,5 @@
  });
 	</script>
 	{!! Notify::render() !!}
-	
+
 </html>
