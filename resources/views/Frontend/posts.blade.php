@@ -70,7 +70,12 @@
     </center>
   </div>
   @endforelse
+</div>
+<div class="row">
+  <div class="col-sm-12 text-center">
+    {{ $posts->links('vendor.pagination.bootstrap-4') }}
 
+  </div>
 </div>
 
 @endsection

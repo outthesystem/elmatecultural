@@ -6,12 +6,13 @@ use App\Post;
 use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Notify;
 
 class FrontendController extends Controller
 {
   public function index(Request $request)
   {
-    $posts = Post::with('category')->Popular()->where('date_init', 'like', '%'.$request->search.'%')->get();
+    $posts = Post::with('category')->Popular()->where('date_init', 'like', '%'.$request->search.'%')->paginate(6);
     $categories = Category::all();
     return view('Frontend.posts', compact('posts', 'categories'));
   }
@@ -44,7 +45,9 @@ class FrontendController extends Controller
         $post->image = $link['data']['link'];
         $post->save();
 
-        return redirect('/')->with('message', 'Se ha cargado tu evento correctamente, una vez aprobado se cargara en el listado de la web.');
+        Notify::success('', $title = 'Se ha cargado tu evento correctamente, una vez aprobado se cargara en el listado de la web.', $options = []);
+
+        return redirect('/');
   }
 
 

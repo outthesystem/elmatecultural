@@ -277,4 +277,6 @@
 	 }
  });
 	</script>
+	{!! Notify::render() !!}
+	
 </html>
