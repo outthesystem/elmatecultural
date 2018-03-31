@@ -63,12 +63,13 @@
                   </div>
                   <div class="form-group">
                     <label for="image">Imagen:</label>
-                    <input type="file" name="image" class="form-control" value="">
+                    <input type="text" name="image" class="form-control" value="{{$post->image}}">
+                    <img src="{{$post->image}}" alt="">
                   </div>
                   <div class="form-check">
                     <label for="approved">Aprobado:</label>
                     @if ($post->approved == 1)
-                      <input type="checkbox" name="approved" id="approved" value="1" checked/>
+                      <input type="checkbox" name="approved" id="approved" value="0" checked/>
                       @else
                         <input type="checkbox" name="approved" id="approved" value="1"/>
                     @endif
@@ -76,15 +77,15 @@
                   <div class="form-check">
                     <label for="name">Destacado:</label>
                     @if ($post->sticky == 1)
-                      <input type="checkbox" name="sticky" id="sticky" value="1" checked/>
+                      <input type="checkbox" name="sticky" id="sticky" value="0" checked/>
                       @else
                         <input type="checkbox" name="sticky" id="sticky" value="1"/>
 
                     @endif
                   </div>
-                  <button type="submit" class="btn btn-success" name="button">Guardar</button>
+                  <button type="submit" class="btn btn-success">Guardar</button>
                 </form>
-                  
+
                 </div>
                 <div class="card-footer">
                 </div>

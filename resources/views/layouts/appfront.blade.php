@@ -6,7 +6,7 @@
 	<link rel="icon" type="image/png" href="{{asset('frontend/img/favicon.png')}}">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>El Mate Cultural</title>
+	<title>El mate cultural</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -26,11 +26,22 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
-					<h1 class="title" style="margin-top:-10px;color:#5CF284;">el mate cultural</h1>
-						<h3 style="margin-top:-15px;color:#333333;">compartiendo cultura</h3>
+					<a href="{{url('/')}}">
+						<h1 class="title" style="margin-top:-10px;color:#5CF284;">el mate cultural</h1>
+					</a>
+						<h3 style="margin-top:-15px;color:#333333;">compartimos cultura</h3>
 						<a data-toggle="modal" data-target="#myModal" class="btn btn-success btn-raised btn-lg">
 						<i class="material-icons">add</i> Crea tu evento
 					<div class="ripple-container"></div></a>
+					@guest
+		        @else
+							@if (Auth::user()->getRoleNames() == 'admin')
+
+							@endif
+							<a href="{{url('posts')}}" class="btn btn-danger btn-raised btn-lg">
+							<i class="material-icons">account_box</i> ir a la administracion
+						<div class="ripple-container"></div></a>
+		      @endguest
 				</div>
 			</div>
 		</div>
@@ -45,7 +56,6 @@
 					<i class="material-icons">clear</i>
 				</button>
 				<h4 class="modal-title">Crea tu evento</h4>
-
 			</div>
 			<div class="modal-body">
 				<form class="" action="{{route('front.store')}}" method="post" enctype="multipart/form-data">
@@ -70,9 +80,9 @@
 	            <label class="label-control">Selecciona una fecha</label>
 	            <input type="text" name="date_init" class="form-control datetimepicker1" value="{{Carbon\Carbon::now()}}"/>
 	        </div>
-					<div class="form-group label-floating">
+					<div class="form-group">
 							<label class="control-label">Hora</label>
-				    	<input type="text" value="" name="hour" class="form-control" />
+				    	<input type="text" value="" name="hour" class="form-control datetimepicker2" />
 					</div>
 					<div class="form-group label-floating">
 							<label class="control-label">Lugar</label>
@@ -111,13 +121,12 @@
 						   </div>
 						</div>
 					</div>
-					<input type="submit" name="" value="dale">
 
-				</form>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default btn-simple">Nice Button</button>
-				<button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">Cerrar</button>
+				<button type="submit"  class="btn btn-success btn-simple">Enviar</button>
+			</form>
 			</div>
 		</div>
 	</div>
@@ -244,6 +253,21 @@
 				clear: 'fa fa-trash',
 				close: 'fa fa-remove'
 		}
+ });
+ $('.datetimepicker2').datetimepicker({
+	format: 'HH:mm',
+	locale: 'es-us',
+	 icons: {
+			 time: "fa fa-clock-o",
+			 date: "fa fa-calendar",
+			 up: "fa fa-chevron-up",
+			 down: "fa fa-chevron-down",
+			 previous: 'fa fa-chevron-left',
+			 next: 'fa fa-chevron-right',
+			 today: 'fa fa-screenshot',
+			 clear: 'fa fa-trash',
+			 close: 'fa fa-remove'
+	 }
  });
 	</script>
 </html>

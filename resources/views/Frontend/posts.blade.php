@@ -26,7 +26,7 @@
 	    										{{$p->title}}
 	    									</div>
 	    								</a>
-	    							<div class="colored-shadow" style="background-image: url(&quot;{{$p->image}}&quot;); opacity: 1;"></div><div class="ripple-container"></div></div>
+	    							<div class="colored-shadow" style="background-image: url(&quot;{{$p->image}}&quot;); opacity: 1;height:330px;"></div><div class="ripple-container"></div></div>
 
 	    							<div class="card-content">
 	    								<h6 class="category text-info">{{$p->category->name}}</h6>

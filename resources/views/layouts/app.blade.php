@@ -96,7 +96,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link {{ request()->is('/posts') ? 'active' : '' }}
-                " href="{{url('/posts')}}"><i class="icon-speedometer"></i> <i class="fa fa-list"></i> Publicaciones </a>
+                " href="{{url('/posts')}}"><i class="icon-speedometer"></i> <i class="fa fa-plus"></i> Publicaciones </a>
               </li>
               <li class="nav-title">
                Usuarios
