@@ -21,17 +21,21 @@ class PostController extends Controller
   public function store(Request $request)
   {
     $client = new \GuzzleHttp\Client();
-    $response = $client->request('POST', 'https://api.imgur.com/3/image', [
-            'headers' => [
-                'authorization' => 'Client-ID ' . '0f1eb0c5a21b47e',
-                'content-type' => 'application/x-www-form-urlencoded',
-            ],
-    'form_params' => [
-                'image' => base64_encode(file_get_contents($request->file('image')))
-            ],
-        ]);
-
-        $link = json_decode($response->getBody()->getContents(), true);
+    if ($request->file('image')) {
+      $response = $client->request('POST', 'https://api.imgur.com/3/image', [
+              'headers' => [
+                  'authorization' => 'Client-ID ' . '0f1eb0c5a21b47e',
+                  'content-type' => 'application/x-www-form-urlencoded',
+              ],
+      'form_params' => [
+                  'image' => base64_encode(file_get_contents($request->file('image')->getRealPath()))
+              ],
+          ]);
+          $link = json_decode($response->getBody()->getContents(), true);
+        }
+          else {
+            $link = '';
+          }
 
     $post = new Post;
     $post->category_id = $request->category_id;
@@ -44,7 +48,14 @@ class PostController extends Controller
     $post->price = $request->price;
     $post->email = $request->email;
     $post->webfacebook = $request->webfacebook;
-    $post->image = $link['data']['link'];
+    if ($request->file('image')) {
+      $post->image = $link['data']['link'];
+
+    } else {
+      $post->image = $link;
+
+    }
+
     $post->approved = $request->approved;
     $post->sticky = $request->sticky;
     $post->save();
