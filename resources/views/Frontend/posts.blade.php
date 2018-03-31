@@ -36,21 +36,24 @@
           {!! $p->description !!}
 
         </p>
-        <div class="footer">
-          <div class="author">
-            <a href="#pablo">
-	    	      <b class="text-success"><i class="material-icons">attach_money</i> {{$p->entrytype}} - <span>${{ number_format($p->price, 2) }}</span></b>
-	    	     </a>
-             <br>
-             <b class="text-info"><i class="material-icons">place</i> {{$p->place}}</b>
+        @if ($p->sticky == 1)
+          @else
+            <div class="footer">
+              <div class="author">
+                <a href="#pablo">
+    	    	      <b class="text-success"><i class="material-icons">attach_money</i> {{$p->entrytype}} - <span>${{ number_format($p->price, 2) }}</span></b>
+    	    	     </a>
+                 <br>
+                 <b class="text-info"><i class="material-icons">place</i> {{$p->place}}</b>
 
-          </div>
-          <div class="stats">
-            <b class="text-danger"><i class="material-icons">date_range</i> {{date('d/m/y', strtotime($p->date_init))}}
-              <br>
-            <i class="material-icons">schedule</i> {{$p->hour}}</b>
-          </div>
-        </div>
+              </div>
+              <div class="stats">
+                <b class="text-danger"><i class="material-icons">date_range</i> {{date('d/m/y', strtotime($p->date_init))}}
+                  <br>
+                <i class="material-icons">schedule</i> {{$p->hour}}</b>
+              </div>
+            </div>
+        @endif
       </div>
     </div>
   </div>

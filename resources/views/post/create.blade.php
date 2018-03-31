@@ -16,7 +16,7 @@
           </div>
           <div class="card-block">
 
-            <form class="" action="{{url('/post')}}" method="post" enctype="multipart/form-data">
+            <form class="" action="{{route('post.store')}}" method="post" enctype="multipart/form-data">
               {{csrf_field()}}
                   <div class="form-group">
                     <label for="name">Titulo:</label>
